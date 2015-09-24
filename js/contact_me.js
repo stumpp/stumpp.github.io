@@ -21,7 +21,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "//formspree.it/anonym.us@outlook.com",
                 type: "POST",
                 data: {
                     name: name,
@@ -29,6 +29,7 @@ $(function() {
                     email: email,
                     message: message
                 },
+                dataType: "json"
                 cache: false,
                 success: function() {
                     // Enable button & show success message
